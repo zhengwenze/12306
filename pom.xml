@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.opengoofy.index12306</groupId>
-    <artifactId>index12306-all</artifactId>
+    <groupId>zwz</groupId>
+    <artifactId>zwz</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <description>zwz</description>
 
-    <description>
-        🔥热门推荐🔥大学春招、秋招、应届项目，SpringBoot3+Java17+SpringCloudAlibaba+RocketMQ等技术架构，完成铁路12306用户+购票+订单+支付服务，帮助学生主打就业的项目。
-    </description>
 
     <developers>
         <developer>
-            <name>马丁</name>
-            <email>machen@apache.org</email>
-            <url>https://github.com/magestacks</url>
-            <organization>Apache and openGoofy</organization>
-        </developer>
-
-        <developer>
-            <name>懒洋洋</name>
-            <email>2084276225@qq.com</email>
-            <url>https://github.com/2084276225</url>
+            <name>zwz</name>
+            <email>zwz</email>
+            <url>zwz</url>
+            <organization>zwz</organization>
         </developer>
     </developers>
+
 
     <properties>
         <java.version>17</java.version>
@@ -36,12 +30,14 @@
         <lombok.version>1.18.30</lombok.version>
     </properties>
 
+
     <modules>
         <module>dependencies</module>
         <module>frameworks</module>
         <module>services</module>
         <module>tests</module>
     </modules>
+
 
     <dependencies>
         <dependency>
@@ -55,6 +51,7 @@
             <version>${lombok.version}</version>
         </dependency>
     </dependencies>
+
 
     <dependencyManagement>
         <dependencies>
@@ -133,7 +130,8 @@
                 <version>${maven-common-plugin.version}</version>
                 <configuration>
                     <!-- ${maven.multiModuleProjectDirectory} 爆红属于正常，并不影响编译或者运行，忽略就好 -->
-                    <configLocation>${maven.multiModuleProjectDirectory}/checkstyle/12306_checkstyle.xml
+                    <configLocation>
+                        ${maven.multiModuleProjectDirectory}/checkstyle/12306_checkstyle.xml
                     </configLocation>
                     <!-- ${maven.multiModuleProjectDirectory} 爆红属于正常，并不影响编译或者运行，忽略就好 -->
                     <suppressionsLocation>
