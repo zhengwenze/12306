@@ -8,9 +8,9 @@
 这个项目旨在让学习者可以快速掌握分布式系统设计的技巧，尤其适合对高并发、分布式感兴趣的同学学习。如果想深入理解和应用分布式系统的设计原则，这个项目将会是一个很好的学习资源。
 
 > 如果对开源感兴趣，可以关注马哥的中间件项目：动态线程池框架 [Hippo4j](https://github.com/opengoofy/hippo4j)
-> 。6.2kStar，43家企业使用。
+> 。6.2kStar，43 家企业使用。
 >
-> 有几位同学参与 Hippo4j 的贡献后，将这段经历写到了简历上，都拿了不错的大厂offer。
+> 有几位同学参与 Hippo4j 的贡献后，将这段经历写到了简历上，都拿了不错的大厂 offer。
 
 12306 项目中包含了缓存、消息队列、分库分表、设计模式等代码，通过这些代码可以全面了解分布式系统的核心知识点。
 
@@ -38,13 +38,13 @@
 
 项目整体架构
 项目概述
-这是一个基于Spring Boot 3和Java 17的分布式票务系统，采用微服务架构设计，使用Spring Cloud Alibaba技术栈，提供高并发、大数据量下的稳定购票服务。
+这是一个基于 Spring Boot 3 和 Java 17 的分布式票务系统，采用微服务架构设计，使用 Spring Cloud Alibaba 技术栈，提供高并发、大数据量下的稳定购票服务。
 
 架构特点
 技术栈: JDK 17 + Spring Boot 3 & Spring Cloud + Spring Cloud Alibaba + RocketMQ
 微服务架构: 采用微服务设计，便于扩展和维护
 聚合服务: 提供聚合服务版本（适合测试和部署）和微服务版本（适合学习）
-代码规范: 集成Checkstyle和Spotless进行代码风格检查和格式化
+代码规范: 集成 Checkstyle 和 Spotless 进行代码风格检查和格式化
 核心服务模块
 aggregation-service (聚合服务)
 
@@ -53,8 +53,8 @@ aggregation-service (聚合服务)
 包含分片配置(shardingsphere-config)
 gateway-service (网关服务)
 
-API网关，统一入口
-JWT令牌验证
+API 网关，统一入口
+JWT 令牌验证
 请求路由和过滤
 order-service (订单服务)
 
@@ -72,7 +72,7 @@ ticket-service (票务服务)
 车票库存管理
 座位分配算法
 车次和站点信息管理
-Lua脚本优化性能
+Lua 脚本优化性能
 user-service (用户服务)
 
 用户信息管理
@@ -82,15 +82,15 @@ base: 基础工具类和上下文持有者
 common: 通用常量和工具类
 convention: 项目规范和约定
 database: 数据库访问层封装
-web: Web层组件和全局异常处理
+web: Web 层组件和全局异常处理
 cache: 缓存框架（支持多级缓存）
-distributedid: 分布式ID生成器
+distributedid: 分布式 ID 生成器
 designpattern: 设计模式实现
 idempotent: 幂等性处理组件
 log: 日志框架组件
 技术亮点
-分库分表: 使用ShardingSphere进行数据分片
-分布式ID: 自研分布式ID生成器
+分库分表: 使用 ShardingSphere 进行数据分片
+分布式 ID: 自研分布式 ID 生成器
 缓存策略: 多级缓存设计
 幂等性: 防止重复提交
 安全防护: 敏感信息脱敏、防刷票等
@@ -167,8 +167,7 @@ log: 日志框架组件
 买一张济南西到南京南的车票。
 
 - 你以为：按照上述逻辑，如果通过软件恶意刷票，只买济南西-南京南的票，北京南-杭州东是否就买不到了？
--
-实际上：每个站数之间的数量都有规则。虽然放票时间都是一致的，但是优先大站之间的票量，避免因为大量用户购买了中间站的车票导致始发站和终点站的购票困难。该问题通过动态放票解决，比如刚开始放票时对小站之间仅开放少量票，大站之间放出来多数票。如果后续接近发车时间，再开放小站间的车票。
+- 实际上：每个站数之间的数量都有规则。虽然放票时间都是一致的，但是优先大站之间的票量，避免因为大量用户购买了中间站的车票导致始发站和终点站的购票困难。该问题通过动态放票解决，比如刚开始放票时对小站之间仅开放少量票，大站之间放出来多数票。如果后续接近发车时间，再开放小站间的车票。
 
 当然，业务以及技术上的难点和亮点并不止于这些，更多的信息可以通过代码以及 12306 的使用上进行发掘。
 
@@ -195,41 +194,41 @@ A：我觉得有必要，已经工作的同学虽然没办法把这个项目应�
 
 - 入门准备
 
-    - [什么是 12306](https://nageoffer.com/12306)
-    - [为什么 12306 更适合学生](https://nageoffer.com/12306/suitable)
-    - [后端技术架构选型](https://nageoffer.com/12306/framework)
-    - [项目接口文档](https://nageoffer.com/12306/interface/)
-    - [前端控制台手册](https://nageoffer.com/12306/console/)
-    - [如何从零到一学习 12306](https://nageoffer.com/12306/how-to-study/)
+  - [什么是 12306](https://nageoffer.com/12306)
+  - [为什么 12306 更适合学生](https://nageoffer.com/12306/suitable)
+  - [后端技术架构选型](https://nageoffer.com/12306/framework)
+  - [项目接口文档](https://nageoffer.com/12306/interface/)
+  - [前端控制台手册](https://nageoffer.com/12306/console/)
+  - [如何从零到一学习 12306](https://nageoffer.com/12306/how-to-study/)
 
 - 快速开始
 
-    - [项目依赖中间件环境搭建](https://nageoffer.com/12306/008ee6/)
-    - [快速启动（后端）](https://nageoffer.com/12306/33d574/)
-    - [快速启动（前端）](https://nageoffer.com/12306/088c16/)
-    - [12306 用户体系建设概要](https://nageoffer.com/12306/dd027d/)
-    - ......
+  - [项目依赖中间件环境搭建](https://nageoffer.com/12306/008ee6/)
+  - [快速启动（后端）](https://nageoffer.com/12306/33d574/)
+  - [快速启动（前端）](https://nageoffer.com/12306/088c16/)
+  - [12306 用户体系建设概要](https://nageoffer.com/12306/dd027d/)
+  - ......
 
 - 核心技术文档
 
-    - [如何生成全局唯一分布式 ID](https://nageoffer.com/12306/distributed-id/)
-    - [如何使用 Builder 模式创建线程池](https://nageoffer.com/12306/threadpool-build/)
-    - [责任链模式重构复杂业务场景](https://nageoffer.com/12306/chain/)
-    - [死磕设计模式之抽象责任链模式](https://nageoffer.com/12306/abstract-chain/)
-    - ......
+  - [如何生成全局唯一分布式 ID](https://nageoffer.com/12306/distributed-id/)
+  - [如何使用 Builder 模式创建线程池](https://nageoffer.com/12306/threadpool-build/)
+  - [责任链模式重构复杂业务场景](https://nageoffer.com/12306/chain/)
+  - [死磕设计模式之抽象责任链模式](https://nageoffer.com/12306/abstract-chain/)
+  - ......
 
 - 手摸手从零到一实现
 
-    - [手摸手之梳理核心业务](https://nageoffer.com/12306/手摸手从零到一实现/手摸手之梳理核心业务/)
-    - [手摸手之梳理数据库表结构设计](https://nageoffer.com/12306/手摸手从零到一实现/手摸手之学习数据库表结构信息/)
-    - ......
+  - [手摸手之梳理核心业务](https://nageoffer.com/12306/手摸手从零到一实现/手摸手之梳理核心业务/)
+  - [手摸手之梳理数据库表结构设计](https://nageoffer.com/12306/手摸手从零到一实现/手摸手之学习数据库表结构信息/)
+  - ......
 
 - 面试系列
 
-    - [如何把 12306 写到简历上](https://nageoffer.com/12306/面试系列/如何把12306写到简历上/)
-    - [面试官问 12306 项目怎么来的？](https://nageoffer.com/12306/面试系列/面试官问12306项目怎么来的？/)
-    - [快手校招一面（12306 面试真题）](https://nageoffer.com/12306/question/)
-    - ......
+  - [如何把 12306 写到简历上](https://nageoffer.com/12306/面试系列/如何把12306写到简历上/)
+  - [面试官问 12306 项目怎么来的？](https://nageoffer.com/12306/面试系列/面试官问12306项目怎么来的？/)
+  - [快手校招一面（12306 面试真题）](https://nageoffer.com/12306/question/)
+  - ......
 
 项目中的文档包括三部分，快速开始、核心技术文档以及从零到一开发。可根据自己的兴趣选择深入了解核心技术或从零到一复刻系统。
 
